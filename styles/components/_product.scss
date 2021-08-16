@@ -1,0 +1,23 @@
+@import '../common/variables';
+
+.product {
+  width: 345px;
+
+  &__basket-button {
+    width: 100%;
+    font-size: 1.875rem;
+    font-weight: 700;
+    padding: 20px;
+    border: 0;
+    color: $basic-black-lighter;
+    background-color: $button-inactive;
+    margin: 5px;
+    cursor: pointer;
+    transition: color .5s, background-color .5s;
+
+    &:hover {
+      color: $basic-black;
+      background-color: $button-inactive-dark;
+    }
+  }
+}

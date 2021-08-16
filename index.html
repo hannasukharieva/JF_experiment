@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JF experiment</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <section class="product">
+    <button class="product__basket-button">Out of Stock</button>
+  </section>
+  <div class="out-of-stock-modal">
+    <div class="out-of-stock-modal__backdrop" />
+    <div class="modal-content">
+      <button class="modal-content__close-icon">
+        &times;
+      </button>
+      <h2 class="modal-content__title">Out of Stock</h2>
+      <p class="modal-content__description">
+        This item has been sold out. Would you like to be informed when it is back in stock again?
+      </p>
+      <form class="modal-content__form form" action="#">
+        <label class="form__label" for="email">
+          <span>E-mail:</span>
+          <input class="form__input" name="email" type="email" />
+        </label>
+        <button class="form__button" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import '../common/variables';
+
+.out-of-stock-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  
+  &__backdrop {
+    position: absolute;
+    opacity: .85;
+    width: 100vw;
+    height: 100vh;
+    background-color: $basic-black;
+    z-index: 1;
+  }
+
+  .modal-content {
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+    padding: 20px;
+    background: $basic-white;
+    z-index: 2;
+    padding: 50px;
+    max-width: 600px;
+
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    &__close-icon {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 2rem;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  
+    &__title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $basic-black-lighter;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form {
+      &__label {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        span {
+          min-width: 50px;
+        }
+      }
+
+      &__input {
+        border: 1px solid $basic-grey;
+        border-radius: 2px;
+        padding: 10px;
+        margin-left: 20px;
+        width: 100%;
+      }
+
+      &__button {
+        background-color: $brand-orange;
+        color: $basic-white;
+        text-transform: uppercase;
+        padding: 15px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        border: 0;
+        margin-top: 20px;
+        transition: background-color .5s, color .5s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $brand-orange-dark;
+          color: $basic-white-transparent;
+        }
+      }
+    }
+  }
+
+  &--open {
+    display: block;
+    position: fixed;
+    animation: fadeIn ease .5s;
+  }
+
+  &--fadeout {
+    animation: fadeOut ease .5s;
+  }
+}
